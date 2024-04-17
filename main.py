@@ -22,8 +22,9 @@ def run():
         for event in pygame.event.get():
             stop = event.type == pygame.QUIT
 
+        simulation.setPos_collision_logic()
         simulation.moving_logic(surface)
-        simulation.collision_logic()
+
 
         pygame.display.flip()
 
