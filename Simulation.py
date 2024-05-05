@@ -45,3 +45,8 @@ class Simulation:
                 # Swap Angular Velocity
                 self.pendulums[index].av, self.pendulums[index + 1].av =\
                     self.pendulums[index + 1].av, self.pendulums[index].av
+                # Reset Angle
+                if self.pendulums[index].av == 0:
+                    self.pendulums[index].a = 0
+                elif self.pendulums[index + 1].av == 0:
+                    self.pendulums[index + 1].a = 0
